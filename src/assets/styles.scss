@@ -1,0 +1,54 @@
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Large tablets and desktops
+$screen-lg-min: 1400px;
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+      @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+      @content;
+  }
+}
+
+
+// Variables
+
+$blue: #0054DB;
+
+/* Typography */
+
+body {
+  font-family: "futura-pt",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; 
+  font-size: 18px;
+  @include md {
+    font-size: 30px;
+  }
+  @include lg {
+    font-size: 30px;
+  }
+
+}
+
+h1 {
+  font-size: 50px;
+  @include md {
+    font-size: 86px;
+  }
+  @include lg {
+    font-size: 180px;
+  }
+}
+
+/* Colors */
+
+body {
+  background-color: $blue;
+}
