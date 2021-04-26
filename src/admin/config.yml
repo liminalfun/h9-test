@@ -6,6 +6,15 @@ media_folder: "static/uploads"
 public_folder: "/uploads"
 
 collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "site/content/home.vue"
+        fields: 
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
   - name: "posts"
     label: "Posts"
     folder: "posts"
