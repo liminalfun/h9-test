@@ -1,6 +1,6 @@
 <template>
   <div class="title">
-    {{ message }}
+    <h1>{{ message }}</h1>
   </div>
 </template>
 
@@ -17,9 +17,6 @@ export default {
 }
 </script>
 
-<style>
-.title {
-  padding: 20px;
-  background: #FFF;
-}
+<style lang = "scss">
+
 </style>
