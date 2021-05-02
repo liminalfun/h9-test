@@ -24,14 +24,14 @@ export default {
 <style lang="scss" scoped>
 
 .nav {
-  padding: 0.5rem 1rem 1.4rem;
+  padding: 1rem 1rem 1.3rem;
   position: sticky;
   top: 0;
   left: 0;
   background-color: $blue;
   z-index: 1;
   @include md {
-    padding: 1.6rem 1.9rem 2rem;
+    padding: 1.6rem 1.9rem 3.7rem;
   }
   @include lg {
     background: $white;
@@ -51,7 +51,7 @@ export default {
 
 .btn {
   position: fixed;
-  top: 0.4rem;
+  top: 0.6rem;
   right: 1.4rem;
   height: 2.75rem;
   width: 2.75rem;
