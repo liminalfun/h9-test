@@ -41,9 +41,15 @@ body, h2 {
 
 }
 
-h1, h2 {
+h1, h2, p {
   font-weight: normal;
+  line-height: 120%;
   margin: 0;
+}
+
+p {
+  line-height: 120%;
+  margin-bottom: 1.2rem;
 }
 
 h1 {
@@ -66,102 +72,69 @@ body {
 
 /* Blocks */
 
-.block {
-  padding: 0.5rem 1.5rem;
-  @include lg {
-    padding: 3.5rem 3rem;
-    background-color: $offwhite;
-  }
-}
-
-.block-lg {
+.content {
+  background-color: $offwhite;
   margin: 1.8rem 0 1rem 1rem;
   @include md {
     margin: 2.5rem 0 1rem 1rem;
   }
   @include lg {
-    margin: 0;
-    max-width: 60vw;
+    margin: 0 0 0 40vw;
+    background-color: $offwhite;
+    div {
+      padding-bottom: 7.3rem;
+    }
+  }
+}
+
+.block-lg {
+  padding: 0.5rem 1.5rem;
+  @include md {
+  }
+  @include lg {
+    padding: 5.5rem 4.5rem;
   }
 }
 
 .block-md {
   @include lg {
-    max-width: 50vw;
+    padding: 5.5rem 4.5rem;
+    margin-left: 10vw;
   }
 }
 
 .block-sm {
   @include lg {
-    max-width: 40vw;
+    padding: 5.5rem 4.5rem;
+    margin-left: 20vw;
+  }
+  div {
+    padding-bottom: 3rem;
   }
 }
 
-.flex {
-  display: block;
-  @include lg {
-    display: flex;
-  }
+.block-full {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.title {
-  padding: 0.5rem 1.5rem;
-  @include md {
-    padding: 1.5rem 2.8rem;
-  }
-  @include lg {
-    height: 100vh;
-    padding: 3.4rem 7rem 3.5rem 3rem;
-    max-width: 40vw;
-    position: sticky;
-    top: 4.4rem;
-  }
+img {
+  width: 100%;
+  object-fit: cover;
 }
-
-.block-table {
-  padding: 2rem 1.8rem;
-  @include md {
-    padding: 4.5rem 1.8rem;
-  }
-  @include lg {
-    padding: 2rem 1.4rem;
-    // padding: 0;
-  }
-}
-
-.block-table > div {
-  margin-bottom: 4.1rem;
-  @include md {
-    margin-bottom: 7.2rem;
-  }
-}
-
-/* Table */
 
 .table-wrapper {
-  overflow-x: scroll;
-}
-table {
-  margin-top: 0.4rem;
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-}
-
-td, th {
-  border: 1px $black solid;
-  height: 1.9rem;
+  padding: 2rem 1.8rem;
+  margin-bottom: 4.1rem;
   @include md {
-    height: 3.25rem;
+    padding: 4.5rem 1.8rem;
+    margin-bottom: 7.2rem;
   }
-}
-
-td:first-child, th:first-child {
-  border-left: none;
-}
-
-td:last-child, th:last-child {
-  border-right: none;
+  @include lg {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 /* Buttons */
@@ -169,7 +142,7 @@ td:last-child, th:last-child {
 .btn-primary {
   background-color: $black;
   color: $white;
-  padding: 10px 20px;
+  padding: 0.5rem 1rem;
   text-align: center;
   text-decoration: none;
   margin: 4px 2px;
