@@ -1,7 +1,9 @@
 <template>
   <div class="nav">
     <a href="/">{{ message }}</a>
-    <button href="/"></button>
+    <a class="btn" href="/">
+      <span>{{ buttonText }}</span>
+    </a>
   </div>
 </template>
 
@@ -10,7 +12,8 @@ export default {
   name: 'Nav',
   data () {
     return {
-      message: 'Sitename'
+      message: 'Sitename',
+      buttonText: 'Back'
     }
   },
   methods: {
@@ -46,24 +49,45 @@ export default {
   }
 }
 
-button {
+.btn {
   position: fixed;
   top: 0.4rem;
   right: 1.4rem;
   height: 2.75rem;
   width: 2.75rem;
-  border-radius: 100%;
+  border-radius: 100px;
   background-color: $black;
   border: none;
+  display: flex;
+  transition: all .5s;
+  span {
+    display: hidden;
+    opacity: 0;
+    color: $white;
+    text-align: center;
+    font-weight: 400;
+    font-size: 40px;
+    margin: 0 auto;
+    align-self: center;
+    transition: all .5s;
+  }
   @include md {
     height: 5.5rem;
-    width: 5.5rem;
+    min-width: 5.5rem;
     top: 1.4rem;
     right: 1.3rem;
   }
   @include lg {
     top: 6.25rem;
     right: 1.3rem;
+    &:hover {
+      padding: 0 1rem;
+      span {
+        display: inline-block;
+        opacity: 100%;
+
+      }
+    }
   }
 }
 </style>

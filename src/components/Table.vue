@@ -34,5 +34,28 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+
+  table {
+    margin-top: 0.4rem;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  td, th {
+    border: 1px $black solid;
+    height: 1.9rem;
+    @include md {
+      height: 3.25rem;
+    }
+  }
+
+  td:first-child, th:first-child {
+    border-left: none;
+  }
+
+  td:last-child, th:last-child {
+    border-right: none;
+  }
 </style>
