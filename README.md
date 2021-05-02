@@ -1,6 +1,6 @@
 # House9 Test
 
-Demo link: [house9test.netlify.app](house9test.netlify.app)
+Demo link: [house9test.netlify.app](https://house9test.netlify.app)
 
 | Task | Est. Time | Actual Time | Notes |
 | ---- | --------- | ----------- | ----- |
