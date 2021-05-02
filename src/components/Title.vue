@@ -28,7 +28,7 @@ export default {
       padding: 3.4rem 7rem 3.5rem 3rem;
       width: calc(40vw - 10rem);
       top: 4.3rem;
-      transition: all .5s;
+      transition: all .25s;
     }
   }
   
