@@ -7,32 +7,28 @@
       
       <!-- Tables -->
       <div class="block-lg">
-        <div class="table-wrapper block-lg">
-          <h2>ECC</h2>
-          <Table/>
-        </div>
+        <h2>ECC</h2>
+        <Table/>
+      </div>
+
         
-        <div class="table-wrapper">
-          <h2>Elementary School</h2>
-          <Table/>
-        </div>
+      <div class="block-lg">
+        <h2>Elementary School</h2>
+        <Table/>
       </div>
 
       <!-- Content with Buttons -->
       <div class="block-sm" v-scroll="expandSm">
-        <div>
-          <h2>Financial Aid</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tincidunt dui ut ornare lectus sit. Aliquam sem et tortor consequat id porta nibh venenatis. At in tellus integer feugiat scelerisque varius morbi enim nunc. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer.</p>
+        <h2>Financial Aid</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tincidunt dui ut ornare lectus sit. Aliquam sem et tortor consequat id porta nibh venenatis. At in tellus integer feugiat scelerisque varius morbi enim nunc. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer.</p>
+        <a href="/" class="btn-primary">Button</a>
+      </div>
 
-          <a href="/" class="btn-primary">Button</a>
-        </div>
+      <div class="block-sm">
+        <h2>Temple Beth Am Membership</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tincidunt dui ut ornare lectus sit. Aliquam sem et tortor consequat id porta nibh venenatis. At in tellus integer feugiat scelerisque varius morbi enim nunc. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer.</p>
 
-        <div>
-          <h2>Temple Beth Am Membership</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tincidunt dui ut ornare lectus sit. Aliquam sem et tortor consequat id porta nibh venenatis. At in tellus integer feugiat scelerisque varius morbi enim nunc. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer.</p>
-
-          <a href="/" class="btn-primary">Button</a>
-        </div>
+        <a href="/" class="btn-primary">Button</a>
       </div>
 
       <div class="block-full">
@@ -40,19 +36,15 @@
       </div>
 
       <div class="block-md" v-scroll="expandMd">
-        <div>
-          <h2>Financial Aid</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tincidunt dui ut ornare lectus sit. Aliquam sem et tortor consequat id porta nibh venenatis. At in tellus integer feugiat scelerisque varius morbi enim nunc. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer.</p>
+        <h2>Financial Aid</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tincidunt dui ut ornare lectus sit. Aliquam sem et tortor consequat id porta nibh venenatis. At in tellus integer feugiat scelerisque varius morbi enim nunc. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer.</p>
+        <a href="/" class="btn-primary">Button</a>
+      </div>
 
-          <a href="/" class="btn-primary">Button</a>
-        </div>
-
-        <div>
-          <h2>Temple Beth Am Membership</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tincidunt dui ut ornare lectus sit. Aliquam sem et tortor consequat id porta nibh venenatis. At in tellus integer feugiat scelerisque varius morbi enim nunc. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer.</p>
-
-          <a href="/" class="btn-primary">Button</a>
-        </div>
+      <div class="block-md">
+        <h2>Temple Beth Am Membership</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tincidunt dui ut ornare lectus sit. Aliquam sem et tortor consequat id porta nibh venenatis. At in tellus integer feugiat scelerisque varius morbi enim nunc. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer.</p>
+        <a href="/" class="btn-primary">Button</a>
       </div>
 
       <div class="block-lg">
@@ -84,15 +76,13 @@ methods: {
       const smBlocks = document.querySelectorAll(".block-sm");
       const title = document.querySelector(".title");
       smBlocks.forEach(smBlock => {
-        let slideInAt = (window.scrollY + window.innerHeight) - smBlock.offsetHeight / 6;
+        let slideInAt = (window.scrollY + window.innerHeight) + smBlock.offsetHeight / 2;
         let isHalfShown = slideInAt > smBlock.offsetTop;
         let smBottom = smBlock.offsetTop + smBlock.offsetHeight / 2 ;
         let isNotScrolledPast = window.scrollY < smBottom;
 
         if (isHalfShown && isNotScrolledPast ) {
           title.classList.add('title-lg');
-          console.log('smBottom ' + smBlock.offsetHeight)
-          console.log('scrollY ' + window.scrollY)
         } else {
           title.classList.remove('title-lg')
         }
@@ -102,7 +92,7 @@ methods: {
       const mdBlocks = document.querySelectorAll(".block-md");
       const title = document.querySelector(".title");
       mdBlocks.forEach(mdBlock => {
-        let slideInAt = (window.scrollY + window.innerHeight) - mdBlock.offsetHeight / 6;
+        let slideInAt = (window.scrollY + window.innerHeight) + mdBlock.offsetHeight / 2;
         let isHalfShown = slideInAt > mdBlock.offsetTop;
         const mdBottom = mdBlock.offsetTop + mdBlock.offsetHeight / 2;
         const isNotScrolledPast = window.scrollY < mdBottom;
