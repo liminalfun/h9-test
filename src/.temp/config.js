@@ -1,7 +1,7 @@
 export default {
   "trailingSlash": true,
   "pathPrefix": "",
-  "titleTemplate": "%s - house9 test",
+  "titleTemplate": "%s - House9 Test",
   "siteUrl": "",
   "version": "0.7.23",
   "catchLinks": true
