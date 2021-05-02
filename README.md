@@ -12,7 +12,7 @@ Demo link: [house9test.netlify.app](https://house9test.netlify.app)
 |Animation|0h30m|1h00m||
 |QA Testing|0h30m|0h30m|All went smoothly!|
 |Documentation|0h25|0h25||
-|Total|4h00m|5h50m||
+|Total|4h00m|5h50m|(Footnote 5)|
 
 ## Footnotes
 
@@ -40,3 +40,7 @@ Ran into an issue with using postcss media queries in Gridsome. Tried troublesho
 
 This was my second time using scss mixins, so it took me a bit longer to look through the docs and create my media query strategy.
 
+## Footnote 5
+In the end, I ended up not connecting Netlify CMS – as I already surpassed my projected time, and CMS integration was not included in the assignment.
+
+I learned a lot from this challenge!
